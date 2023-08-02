@@ -171,3 +171,14 @@ section {
     }
   }
 }
+
+///////////////////////////////////
+// FURNITURE SECTION
+///////////////////////////////////
+.furniture-section {
+  @extend .health-care-section;
+  .product-card {
+    color: #fff;
+    background-color: $tertiary-color;
+  }
+}

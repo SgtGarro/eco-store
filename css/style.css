@@ -103,24 +103,24 @@ section {
   font-weight: 700;
 }
 
-.health-care-section {
+.health-care-section, .furniture-section {
   padding: 0;
   margin-bottom: 6.4rem;
 }
-.health-care-section h2 {
+.health-care-section h2, .furniture-section h2 {
   padding: 0 2.4rem;
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 3.2rem;
   color: #7c6a0a;
 }
-.health-care-section .product-list {
+.health-care-section .product-list, .furniture-section .product-list {
   display: flex;
   padding: 0 2.4rem;
   gap: 2.8rem;
   overflow-x: auto;
 }
-.health-care-section .product-card {
+.health-care-section .product-card, .furniture-section .product-card {
   flex: none;
   width: 18rem;
   padding: 3.2rem 2rem 1.6rem;
@@ -129,22 +129,27 @@ section {
   color: #7c6a0a;
   background-color: #ffdac6;
 }
-.health-care-section .product-card .product-img {
+.health-care-section .product-card .product-img, .furniture-section .product-card .product-img {
   margin-bottom: 0.8rem;
 }
-.health-care-section .product-card .product-img img {
+.health-care-section .product-card .product-img img, .furniture-section .product-card .product-img img {
   width: 100%;
   height: 16rem;
   object-fit: cover;
   border-radius: 4px;
 }
-.health-care-section .product-card h3 {
+.health-care-section .product-card h3, .furniture-section .product-card h3 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
-.health-care-section .product-card p {
+.health-care-section .product-card p, .furniture-section .product-card p {
   font-size: 1.2rem;
+}
+
+.furniture-section .product-card {
+  color: #fff;
+  background-color: #babd8d;
 }
 
 /*# sourceMappingURL=style.css.map */
