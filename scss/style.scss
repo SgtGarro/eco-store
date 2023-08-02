@@ -288,3 +288,43 @@ section {
     font-size: 1.6rem;
   }
 }
+
+///////////////////////////////////
+// FOOTER
+///////////////////////////////////
+.footer {
+  padding: 2.4rem;
+  background-color: $quaternary-color;
+  color: #fff;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 1.6rem;
+    margin-bottom: 3.2rem;
+
+    font-size: 1.4rem;
+  }
+
+  .social-media {
+    display: flex;
+    column-gap: 3.2rem;
+
+    img {
+      width: 2.8rem;
+      height: 2.8rem;
+      cursor: pointer;
+
+      transition: all 0.3s ease-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
