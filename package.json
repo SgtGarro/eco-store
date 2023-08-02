@@ -1,0 +1,23 @@
+{
+  "name": "eco-store",
+  "version": "1.0.0",
+  "description": "A friendly online echologyc store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SgtGarro/eco-store.git"
+  },
+  "keywords": [],
+  "author": "SgtGarro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SgtGarro/eco-store/issues"
+  },
+  "homepage": "https://github.com/SgtGarro/eco-store#readme",
+  "dependencies": {
+    "sass": "^1.64.2"
+  }
+}
