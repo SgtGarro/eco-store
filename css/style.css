@@ -7,9 +7,11 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   background-color: #ffefe7;
 }
 
@@ -20,21 +22,50 @@ button {
 section {
   padding: 0 2.4rem;
 }
+@media (min-width: 48em) {
+  section {
+    padding: 0;
+  }
+}
 
 .container {
   width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 48em) {
+  .container {
+    max-width: 72rem;
+  }
+}
+@media (min-width: 62em) {
+  .container {
+    max-width: 96rem;
+  }
+}
+@media (min-width: 75em) {
+  .container {
+    max-width: 120rem;
+  }
 }
 
 .header {
   width: 100%;
   height: 9.6rem;
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2.4rem;
+}
+@media (min-width: 48em) {
+  .navbar {
+    padding: 0 3.2rem;
+  }
 }
 .navbar .navbar-left .logo {
   display: inline-block;
@@ -45,6 +76,11 @@ section {
 }
 .navbar .navbar-left .logo:hover {
   transform: scale(1.05);
+}
+@media (min-width: 48em) {
+  .navbar .navbar-left .logo {
+    font-size: 3.2rem;
+  }
 }
 .navbar .navbar-right button {
   display: grid;
@@ -63,6 +99,22 @@ section {
 .navbar .navbar-right > :not(.menu) {
   display: none;
 }
+@media (min-width: 48em) {
+  .navbar .navbar-right {
+    display: flex;
+    gap: 4rem;
+  }
+  .navbar .navbar-right > :not(.menu) {
+    display: grid;
+  }
+  .navbar .navbar-right > :not(.menu) svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .navbar .navbar-right .menu {
+    display: none;
+  }
+}
 
 .hero-section {
   margin-bottom: 6.4rem;
@@ -78,6 +130,16 @@ section {
   height: 50vh;
   max-height: 36rem;
   border-radius: 8px;
+}
+@media (min-width: 48em) {
+  .hero-section .hero-img {
+    align-self: stretch;
+  }
+  .hero-section .hero-img img {
+    height: 70vh;
+    min-height: 100%;
+    max-height: 52rem;
+  }
 }
 .hero-section .hero-content {
   color: #7c6a0a;
@@ -102,6 +164,79 @@ section {
   font-size: 1.4rem;
   font-weight: 700;
 }
+@media (min-width: 48em) {
+  .hero-section .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 3.6rem;
+  }
+  .hero-section .hero-content p {
+    font-size: 1.8rem;
+    margin-bottom: 6.4rem;
+    line-height: 1.8;
+  }
+  .hero-section .hero-content button {
+    display: initial;
+    font-size: 2rem;
+    padding: 1.6rem 3.6rem;
+  }
+}
+@media (min-width: 75em) {
+  .hero-section .hero-content h1 {
+    font-size: 5.8rem;
+    margin-bottom: 5.8rem;
+  }
+  .hero-section .hero-content p {
+    font-size: 2.4rem;
+    margin-bottom: 10.8rem;
+  }
+}
+.hero-section br {
+  display: none;
+}
+@media (min-width: 48em) {
+  .hero-section {
+    margin-top: 4.4rem;
+    margin-bottom: 9.6rem;
+  }
+  .hero-section .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero-section .hero-content {
+    width: 50%;
+  }
+}
+@media (min-width: 48em) {
+  .hero-section .hero-img {
+    width: 45%;
+  }
+}
+@media (min-width: 62em) {
+  .hero-section .hero-img {
+    width: 35%;
+  }
+}
+@media (min-width: 75em) {
+  .hero-section {
+    margin-top: 6.4rem;
+    margin-bottom: 12.8rem;
+  }
+  .hero-section br {
+    display: initial;
+  }
+  .hero-section .container {
+    align-items: initial;
+  }
+  .hero-section .hero-img {
+    width: 40%;
+    height: 64rem;
+  }
+  .hero-section .hero-content {
+    padding-top: 4.8rem;
+  }
+}
 
 .health-care-section, .furniture-section {
   padding: 0;
@@ -114,11 +249,36 @@ section {
   margin-bottom: 3.2rem;
   color: #7c6a0a;
 }
+@media (min-width: 48em) {
+  .health-care-section h2, .furniture-section h2 {
+    padding: 0;
+    font-size: 3.2rem;
+    margin-bottom: 4.8rem;
+  }
+  .health-care-section h2 br, .furniture-section h2 br {
+    display: none;
+  }
+}
+@media (min-width: 75em) {
+  .health-care-section h2, .furniture-section h2 {
+    font-size: 4.8rem;
+    margin-bottom: 6.4rem;
+  }
+}
 .health-care-section .product-list, .furniture-section .product-list {
   display: flex;
   padding: 0 2.4rem;
   gap: 2.8rem;
   overflow-x: auto;
+}
+@media (min-width: 48em) {
+  .health-care-section .product-list, .furniture-section .product-list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.6rem;
+  }
 }
 .health-care-section .product-card, .furniture-section .product-card {
   flex: none;
@@ -138,13 +298,80 @@ section {
   object-fit: cover;
   border-radius: 4px;
 }
+@media (min-width: 48em) {
+  .health-care-section .product-card .product-img, .furniture-section .product-card .product-img {
+    margin-bottom: 1.6rem;
+  }
+  .health-care-section .product-card .product-img img, .furniture-section .product-card .product-img img {
+    height: 20rem;
+  }
+}
+@media (min-width: 75em) {
+  .health-care-section .product-card .product-img img, .furniture-section .product-card .product-img img {
+    height: 28rem;
+  }
+}
 .health-care-section .product-card h3, .furniture-section .product-card h3 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
+@media (min-width: 48em) {
+  .health-care-section .product-card h3, .furniture-section .product-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+}
+@media (min-width: 62em) {
+  .health-care-section .product-card h3, .furniture-section .product-card h3 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 75em) {
+  .health-care-section .product-card h3, .furniture-section .product-card h3 {
+    font-size: 2.4rem;
+  }
+}
 .health-care-section .product-card p, .furniture-section .product-card p {
   font-size: 1.2rem;
+}
+@media (min-width: 48em) {
+  .health-care-section .product-card p, .furniture-section .product-card p {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 62em) {
+  .health-care-section .product-card p, .furniture-section .product-card p {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 48em) {
+  .health-care-section .product-card, .furniture-section .product-card {
+    width: 20rem;
+    padding: 3.2rem 2rem 2.8rem;
+  }
+}
+@media (min-width: 62em) {
+  .health-care-section .product-card, .furniture-section .product-card {
+    width: 24rem;
+    padding: 3.6rem 2.4rem 3.2rem;
+  }
+}
+@media (min-width: 75em) {
+  .health-care-section .product-card, .furniture-section .product-card {
+    width: 32.4rem;
+    padding: 5.6rem 4rem;
+  }
+}
+@media (min-width: 48em) {
+  .health-care-section, .furniture-section {
+    margin-bottom: 9.6rem;
+  }
+}
+@media (min-width: 75em) {
+  .health-care-section, .furniture-section {
+    margin-bottom: 12.8rem;
+  }
 }
 
 .furniture-section .product-card {
@@ -161,17 +388,53 @@ section {
   font-weight: 500;
   margin-bottom: 8rem;
 }
+@media (min-width: 48em) {
+  .about-us h2 {
+    font-size: 3.2rem;
+    margin-bottom: 9.6rem;
+  }
+}
+@media (min-width: 75em) {
+  .about-us h2 {
+    font-size: 4.8rem;
+    margin-bottom: 16rem;
+  }
+}
 .about-us .team-mission {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5.4rem;
 }
-.about-us .earth {
+@media (min-width: 48em) {
+  .about-us .team-mission {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 75em) {
+  .about-us .team-mission {
+    gap: 0;
+  }
+}
+.about-us .earth,
+.about-us .innovate {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   align-items: center;
+}
+@media (min-width: 48em) {
+  .about-us .earth,
+  .about-us .innovate {
+    flex-direction: row;
+  }
+}
+@media (min-width: 75em) {
+  .about-us .earth,
+  .about-us .innovate {
+    gap: 2.4rem;
+  }
 }
 .about-us p {
   text-align: center;
@@ -179,8 +442,38 @@ section {
   font-size: 1.4rem;
   font-weight: 500;
 }
+@media (min-width: 48em) {
+  .about-us p {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 75em) {
+  .about-us p {
+    font-size: 2.8rem;
+  }
+}
 .about-us img {
-  width: 35vw;
+  width: 25vw;
+}
+@media (min-width: 48em) {
+  .about-us img {
+    width: 40%;
+  }
+}
+@media (min-width: 75em) {
+  .about-us img {
+    width: 30%;
+  }
+}
+@media (min-width: 48em) {
+  .about-us {
+    margin-bottom: 9.6rem;
+  }
+}
+@media (min-width: 75em) {
+  .about-us {
+    margin-bottom: 24rem;
+  }
 }
 
 .gallery {
@@ -191,6 +484,18 @@ section {
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 4rem;
+}
+@media (min-width: 48em) {
+  .gallery h2 {
+    font-size: 3.2rem;
+    margin-bottom: 4.8rem;
+  }
+}
+@media (min-width: 75em) {
+  .gallery h2 {
+    font-size: 4.8rem;
+    margin-bottom: 6.4rem;
+  }
 }
 .gallery .gallery-images {
   display: flex;
@@ -203,6 +508,22 @@ section {
   border-radius: 8px;
   overflow: hidden;
 }
+@media (min-width: 48em) {
+  .gallery .gallery-images div {
+    width: 100%;
+    height: 20.8rem;
+  }
+}
+@media (min-width: 62em) {
+  .gallery .gallery-images div {
+    height: 28.8rem;
+  }
+}
+@media (min-width: 75em) {
+  .gallery .gallery-images div {
+    height: 36.8rem;
+  }
+}
 .gallery .gallery-images img {
   width: 100%;
   height: 100%;
@@ -210,6 +531,17 @@ section {
 }
 .gallery .gallery-images img:hover {
   transform: scale(1.1);
+}
+@media (min-width: 48em) {
+  .gallery .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 48em) {
+  .gallery {
+    margin-bottom: 9.6rem;
+  }
 }
 
 .location {
@@ -220,6 +552,18 @@ section {
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 3.6rem;
+}
+@media (min-width: 48em) {
+  .location h2 {
+    font-size: 3.2rem;
+    margin-bottom: 4.8rem;
+  }
+}
+@media (min-width: 75em) {
+  .location h2 {
+    font-size: 4.8rem;
+    margin-bottom: 6.4rem;
+  }
 }
 .location .map {
   margin-bottom: 4.4rem;
@@ -232,15 +576,45 @@ section {
   object-fit: cover;
   object-position: 40% center;
 }
+@media (min-width: 62em) {
+  .location .map {
+    height: auto;
+  }
+}
 .location h3 {
   color: #e86424;
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 1.6rem;
 }
+@media (min-width: 48em) {
+  .location h3 {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 62em) {
+  .location h3 {
+    font-size: 3.6rem;
+  }
+}
 .location p {
   color: #e86424;
   font-size: 1.6rem;
+}
+@media (min-width: 48em) {
+  .location p {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 62em) {
+  .location p {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 62em) {
+  .location {
+    margin-bottom: 12.8rem;
+  }
 }
 
 .footer {
@@ -253,6 +627,18 @@ section {
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
+@media (min-width: 48em) {
+  .footer h3 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 62em) {
+  .footer h3 {
+    font-size: 3.2rem;
+    margin-bottom: 3.6rem;
+  }
+}
 .footer ul {
   display: flex;
   flex-direction: column;
@@ -260,6 +646,20 @@ section {
   row-gap: 1.6rem;
   margin-bottom: 3.2rem;
   font-size: 1.4rem;
+}
+@media (min-width: 48em) {
+  .footer ul {
+    font-size: 1.8rem;
+    row-gap: 2rem;
+    margin-bottom: 6.4rem;
+  }
+}
+@media (min-width: 62em) {
+  .footer ul {
+    font-size: 2rem;
+    row-gap: 2.4rem;
+    margin-bottom: 9.6rem;
+  }
 }
 .footer .social-media {
   display: flex;
@@ -273,6 +673,22 @@ section {
 }
 .footer .social-media img:hover {
   transform: scale(1.2);
+}
+@media (min-width: 48em) {
+  .footer .social-media img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+@media (min-width: 48em) {
+  .footer {
+    padding: 4.8rem 3.2rem;
+  }
+}
+@media (min-width: 62em) {
+  .footer {
+    padding: 4.8rem 7.2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
